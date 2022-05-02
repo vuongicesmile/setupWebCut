@@ -1,0 +1,75 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    //mặc đinh font-size là 16 rồi không xét nữa
+    line-height: 1; // chiều cao mỗi dòng chữ
+    font-family: $font; // font mac dinh 
+    color: $text-color; // mau chu mac dinh
+    font-weight:400; // chieu cao cua font chu
+    background-color: white;
+}
+
+.button {
+    display: inline-block;// hien thi tren 1 dong va chi su ly phan noi dun
+    padding: 13px 45px;
+    border-radius: 100rem;//bo
+    font-family: $font;
+    line-height: 1;
+    font-size: 16px;
+    cursor: pointer;//hien thi con tro chuot khi di chuyen vao thanh phan
+    border: null;// duong ke
+    outline: none;
+    &--primary {
+        font-weight: 700;
+        background-color: $primary-color;
+        color: white;
+    }
+    &--outline {
+        background-color: transparent; // mau trong suot
+        color: $primary-color;
+        font-weight: 500;
+        border : 1px solid;
+    }
+    &--rounded {
+        border-radius: 10px;
+        padding : 17px 65px;
+        position: relative;
+    &:after {
+        content : "";
+        top : 0;
+        left : 50%;
+        width :90%;
+        height: 100%;
+        position : absolute;
+        background: rgba(245, 56, 56, 0.35);//mau cua cai button ; background color : mau nen
+        filter: blur(54px);
+        border-radius: 10px;
+        z-index: -1; // so voi truc z thi no nam sau thang cha
+        transform: translate(-50%, 50%);
+    }
+}
+
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $heading-color;
+    font-weight: bold;
+}
+
+.heading {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: calc(50 / 35);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
